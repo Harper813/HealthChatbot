@@ -107,7 +107,11 @@ def execute_bot():
                 print('The model suggests:')
                 print()
                 row = doctors[doctors['disease'] == present_disease[0]]
+                # doctors 是一个表格 表格后面加['']是提取这个表格的这个列 这个row是提取了对应的那一行 本质也是个表格
                 print('Consult ', str(row['name'].values))
+                #因为row也是个表格 所以也加['name']来提取其中name的那一列
+                #我要继续用 pandas 查表、筛选、选列 → 通常不加 .values
+                #我要把表格里的数字/文字真正取出来，拿去 NumPy、机器学习或者进一步处理 → 可能会加 .values
                 print()
                 print('Visit ', str(row['link'].values))
                 #print(present_disease[0])
