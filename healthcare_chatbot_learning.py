@@ -68,9 +68,9 @@ def execute_bot():
         feature_name = []
       for i in tree_.feature:
         if i != _tree.TREE_UNDEFINED:
-        feature_name.append(feature_names[i])
+            feature_name.append(feature_names[i])
         else:
-        feature_name.append("undefined!")
+            feature_name.append("undefined!")
         #print("def tree({}):".format(", ".join(feature_names)))
         symptoms_present = []
 
